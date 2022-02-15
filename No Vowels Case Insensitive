@@ -1,0 +1,13 @@
+# Removes all vowels from a string. Case insensitive
+def noVowels(s):
+    news = ""
+    vowels = {"a": "", "e": "", "i": "", "o": "","u": ""}
+    s = s.lower()
+    novowels = s.maketrans(vowels)
+    x = 0
+    for c in s:
+        x += 1
+        for j in vowels:
+            if c == j:
+                news = s.translate(novowels)
+    return news
