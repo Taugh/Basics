@@ -1,0 +1,15 @@
+# Creates a dictionary from a list
+def word_count (wordlist):  # Takes a list as an input
+    newdict = {}
+    for i in wordlist:
+        x = 0
+        key = i
+        if key in newdict:
+            continue
+        else:
+            for j in wordlist:
+              if i == j:
+                  x += 1
+            newdict.update({i:x})
+    
+    return newdict
