@@ -1,0 +1,10 @@
+# Given n finds next prime number
+def nextPrime(n):
+    a = n + 1
+    b = 10 * n  # The integer (10) can be changed
+    for p in range(a, b):
+        for i in range(2, p):
+            if p % i == 0:
+                break
+        else:
+            return p
