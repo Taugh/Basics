@@ -1,0 +1,13 @@
+# Creates a right triangle 
+def triangle(s):
+    for i in range(s):
+        if i == 0 :
+            
+            print("*")
+            
+        elif i == s-1:
+            
+            print("* " * (i+1),end=" ")
+            
+        else:
+            print("* "+" "*(i+i-1) +"*")
