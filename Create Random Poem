@@ -1,0 +1,75 @@
+# Creates a random poem from words in the word lists(nouns, verbs, adjectives, prepositions, and adverbs)
+# Words in lists can be changed to create different poems
+
+from random import choice
+
+
+nouns = ["celebration", "maintenance", "television", "manufacturer",
+         "imagination", "atmosphere"]
+verbs = ["facilitate", "contribute", "appreciate", "investigate", "concentrate",
+         "experience"]
+adjectives = ["bewildered", "electrical", "outrageous", "successfully",
+              "harmonious", "frightened"]
+prepositions = ["beneath", "within", "despite", "considering"]
+adverbs = ["extravagantly", "mysteriously", "wearily", "greedily"]
+
+def make_poem():
+    noun1 = choice(nouns)
+    noun2 = choice(nouns)
+    noun3 = choice(nouns)
+
+    while noun1 == noun2:
+        noun2 = choice(nouns)
+        
+    while noun1 == noun3 or noun2 == noun3:
+        noun3 = choice(nouns)
+
+    verb1 = choice(verbs)
+    verb2 = choice(verbs)
+    verb3 = choice(verbs)
+
+    while verb1 == verb2:
+        verb2 = choice(verbs)
+
+    while verb1 == verb3 or verb2 == verb3:
+        verb2 = choice(verbs)
+
+    adj1 = choice(adjectives)
+    adj2 = choice(adjectives)
+    adj3 = choice(adjectives)
+
+    while adj1 == adj2:
+        adj2 = choice(adjectives)
+
+    while adj1 == adj3 or adj2 == adj3:
+        adj3 = choice(adjectives)
+
+    prep1 = choice(prepositions)
+    prep2 = choice(prepositions)
+
+    while prep1 == prep2:
+        prep2 = choice(prepositions)
+
+    adverb = choice(adverbs)
+
+    if "aeiou".find(adj1[0]) != -1:
+        article = "An"
+    else:
+        article = "A"
+
+    if "aeiou".find(adj3[0]) != -1:
+        article = "An"
+    else:
+        article = "A"
+
+    poem = (
+        f"{article} {adj1} {noun1}\n\n"
+        f"{article} {adj1} {noun1} {verb1} {prep1} the {adj2} {noun2}\n"
+        f"{adverb}, the {noun1} {verb2}\n"
+        f"the {noun2} {verb3} {prep2} {article.lower()} {adj3} {noun3}"
+        )
+
+    return poem
+
+poem = make_poem()
+print(poem)
