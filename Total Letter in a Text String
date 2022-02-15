@@ -1,0 +1,9 @@
+# Counts the number of letters(alphabet only) both upper and lower case
+def letter_count(text):
+    count = 0
+    for i in text:
+        if i >= "a" and i <= "z":
+            count += 1
+        elif i >= "A" and i <= "Z":
+                count += 1
+    return count
