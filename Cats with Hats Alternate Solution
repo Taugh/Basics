@@ -1,0 +1,24 @@
+# Alternate solution to Cats with hats
+# Number of cats is 100
+# Number of laps is 100
+# First round all cats get a hat
+# For remaining rounds, if a cat has a hat- remove hat, else add hat
+# Each lap increases by n += 1 and cats stopped ay is cat # / lap == 0
+# At lap 100 the only cat stopped at will be cat 100
+
+cats_with_hats = []
+num_of_cats = 100
+num_of_laps = 100
+
+# Add 1 to num of laps to make 100
+for lap in range(1, num_of_laps + 1):
+    # Add 1 to cats to make 100
+    for cat in range(1, num_of_cats + 1):
+        # Check to make sure onlt cats taht are multiple of laps are selected
+        if cat % lap == 0:
+            if cat in cats_with_hats:
+                cats_with_hats.remove(cat)
+            else:
+                cats_with_hats.append(cat)
+
+print(cats_with_hats)
