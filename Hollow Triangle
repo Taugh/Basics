@@ -2,12 +2,8 @@
 def triangle(s):
     for i in range(s):
         if i == 0 :
-            
             print("*")
-            
         elif i == s-1:
-            
-            print("* " * (i+1),end=" ")
-            
+            print("* " * s)
         else:
-            print("* "+" "*(i+i-1) +"*")
+            print("*"+(" "*((i)*2)) +"*",sep=" ")
