@@ -1,0 +1,12 @@
+# Takes a string of text and converts it to lower case, and removes all non-alphabet characters
+# Returns a "clean" string 
+def Isclean(s): # Use for case insensitive
+    news = ""
+    s = s.lower()
+    for c in s:
+        if c >= "a" and c <= "z":
+            news += c
+        else:
+            news += " "
+    
+    return news
