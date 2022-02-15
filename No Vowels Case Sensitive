@@ -1,0 +1,7 @@
+# Removes all vowels from a string. Case sensitive
+def removevowels(line):
+    newline = ""
+    for c in line:
+        if c not in "aeiouAEIOU":
+            newline += c
+    return newline
