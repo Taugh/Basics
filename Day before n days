@@ -1,0 +1,9 @@
+# Takes a start day and an integer(postive integers move backwards ndays, negative integers move forward ndays), returns ndays from start day
+days = ["Sunday", "Monday", "Tuesday", "Wednsday", "Thursday", "Friday", "Saturday"]
+
+day = input("Enter start day: ")
+
+ndays = int(input("Enter number of days to move: "))
+yday = days.index(day) - (ndays % 7)
+
+print(f"Your new day is {days[yday]}")  
