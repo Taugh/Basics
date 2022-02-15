@@ -1,0 +1,6 @@
+# Takes a base amount(a), an increnment value(d), and term(d)
+# Creates a sequence where the differences between every two consecutive terms are the same and returns the total value
+a = int(input("Enter amount: "))
+d = int(input("Enter increment: "))
+n = int(input("Enter term: "))
+print(a + (n - 1)* d)
