@@ -1,3 +1,4 @@
+```
 # Creates a right triangle 
 def triangle(s):
     for i in range(s):
@@ -7,3 +8,4 @@ def triangle(s):
             print("* " * s)
         else:
             print("*"+(" "*((i)*2)) +"*",sep=" ")
+ ```
