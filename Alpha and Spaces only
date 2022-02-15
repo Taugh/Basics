@@ -1,0 +1,10 @@
+ Takes string s and return only alphas and spaces where non-alphas were
+def alphas(s):
+    x = ''
+    for i in s:
+       if i.isalpha():
+           x = x + i
+       else:
+           x = x + ' '
+        
+    return x
