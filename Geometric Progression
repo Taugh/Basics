@@ -1,0 +1,7 @@
+# Takes three parameters, base value(a), value to increment(r) and the and interval(n)
+# Creates a sequence of non-zero numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number called the common ratio
+# Returns the total value of the sequence
+a = int(input("Enter amount: "))
+r = int(input("Enter increment: "))
+n = int(input("Enter term: "))
+print(a* r**(n-1))
