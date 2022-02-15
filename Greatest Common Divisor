@@ -1,0 +1,9 @@
+# Given a, and b function returns gcd
+def gcd(num1, num2):
+    min1 = min(num1, num2) # Returns the lesser of num1 and num2
+    x = 0
+    for i in range(1, min1 + 1):
+        if (a % i == 0 and b % i == 0):
+            if x < i:
+                x = i
+    return x
