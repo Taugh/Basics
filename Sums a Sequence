@@ -1,0 +1,4 @@
+# Sums the sequence of number from one to n
+n =  int(input("Enter last number: "))
+x = (n * (n + 1)//2)
+print(f" sum is {x:,}")
