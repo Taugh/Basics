@@ -1,0 +1,5 @@
+# Opens and reads file passed as a parameter
+def displaycontents(filename):
+    fp = open(filename)
+    print(fp.read())
+    fp.close()
