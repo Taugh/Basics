@@ -1,0 +1,12 @@
+# Takes a string of text and removes all non-alphabet characters. Does not change case
+ def Isclean2(s): # Use for case sensitive
+     news = ""
+     for c in s:
+         if c >= "a" and c <= "z":
+             news += c
+         elif c >= "A" and c <= "Z":
+             news += c
+         else:
+             news += " "
+    
+     return print(news)
