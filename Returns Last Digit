@@ -1,0 +1,9 @@
+# Takes any integer (num) and returns the last digit
+# Example, if the number 14578 is entered, 8 will be returned
+num = input("Enter a number: ")
+
+x = [n for n in num]
+print(f"The last digit is {x[-1]}")
+
+last = abs(int(num)) % 10
+print(f"The last digit is {last}")
