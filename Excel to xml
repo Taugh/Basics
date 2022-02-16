@@ -25,6 +25,8 @@ with tag('PO'):
     # Use ws.max_row for all rows
     for row in ws.iter_rows(min_row=2, max_row=26, min_col=1, max_col=14):
         row = [cell.value for cell in row]
+        if cell.value is None:
+            cell.value = "None"
         wblist.append(row)
         with tag("PO_Line"):
             with tag("PO_Number"):
