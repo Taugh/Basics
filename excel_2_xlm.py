@@ -3,6 +3,7 @@
 from openpyxl import load_workbook
 from yattag import Doc, indent
 from datetime import date
+import os
 
 po = str(input('Enter PO number: '))
 lines = int(input('Enter last line number used in the file: '))
@@ -23,7 +24,6 @@ def clean_WB(w, x):
                 cell.value = "None"
     wb.save('clean_wb.xlsx')
     
-
 def convert2xml(w, x, date):
     # Loads Excel workbook 
     wb = load_workbook(w)
@@ -90,6 +90,15 @@ def convert2xml(w, x, date):
     ##print(result)
     with open(f"fwn_{po}_{date}.xml", "w") as f:
         f.write(result)
+
+def deleteFile(w):
+    file = w
+    location = 'C:\Program Files\Python39\projects\excel_to_xml'
+    path = os.path.join(location, file)
+    os.remove(path)
+    print(f'{file} has been removed successfully')
     
 clean_WB(w, x)
 convert2xml('clean_wb.xlsx', x, date)
+deleteFile(w)
+
